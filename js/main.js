@@ -23,3 +23,21 @@ if (modal) {
         }
     });
 }
+
+// Меню на телефоне: кнопка "Меню" открывает и закрывает список пунктов
+const menuButton = document.querySelector('.site-header__toggle');
+const siteNav = document.querySelector('.site-nav');
+
+menuButton.addEventListener('click', function () {
+    siteNav.classList.toggle('site-nav--open');
+});
+
+// Фильтры каталога на телефоне
+const filtersBlock = document.querySelector('.catalog-filters');
+const filtersButton = document.querySelector('.catalog-filters__toggle');
+
+if (filtersButton) {
+    filtersButton.addEventListener('click', function () {
+        filtersBlock.classList.toggle('catalog-filters--open');
+    });
+}

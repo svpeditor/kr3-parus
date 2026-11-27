@@ -7,12 +7,15 @@
     <title>Курсы | Парус</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -81,7 +84,10 @@
                 <p class="catalog-count" id="catalog-count">Найдено курсов: 10</p>
                 <div class="products-grid" id="courses-list">
                     <article class="product-card" data-id="1" data-category="beginner" data-price="12900" data-available="true">
-                        <img class="product-card__image" src="images/small-sloop.jpg" alt="Небольшая белая яхта на воде у берега" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/small-sloop-480.webp 480w, images/small-sloop.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/small-sloop.jpg" srcset="images/small-sloop-480.jpg 480w, images/small-sloop.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Небольшая белая яхта на воде у берега">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Для новичков</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=1">Азы парусного спорта</a></h3>
@@ -98,7 +104,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="2" data-category="beginner" data-price="8500" data-available="true">
-                        <img class="product-card__image" src="images/bow-view.jpg" alt="Вид с борта на паруса и воду" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/bow-view-480.webp 480w, images/bow-view.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/bow-view.jpg" srcset="images/bow-view-480.jpg 480w, images/bow-view.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Вид с борта на паруса и воду">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Для новичков</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=2">Интенсив на выходные</a></h3>
@@ -115,7 +124,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="3" data-category="beginner" data-price="3200" data-available="true">
-                        <img class="product-card__image" src="images/laser.jpg" alt="Спортсмен на одиночной лодке с красным парусом" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/laser-480.webp 480w, images/laser.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/laser.jpg" srcset="images/laser-480.jpg 480w, images/laser.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Спортсмен на одиночной лодке с красным парусом" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Для новичков</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=3">Занятие на лодке Лазер</a></h3>
@@ -132,7 +144,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="4" data-category="skipper" data-price="36000" data-available="true">
-                        <img class="product-card__image" src="images/cruiser-a.jpg" alt="Килевая яхта под парусами на озере" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/cruiser-a-480.webp 480w, images/cruiser-a.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/cruiser-a.jpg" srcset="images/cruiser-a-480.jpg 480w, images/cruiser-a.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Килевая яхта под парусами на озере" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Шкипер</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=4">Шкипер-прибрежник</a></h3>
@@ -149,7 +164,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="5" data-category="skipper" data-price="14500" data-available="false">
-                        <img class="product-card__image" src="images/cruiser-c.jpg" alt="Яхта с белыми парусами идёт по спокойной воде" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/cruiser-c-480.webp 480w, images/cruiser-c.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/cruiser-c.jpg" srcset="images/cruiser-c-480.jpg 480w, images/cruiser-c.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Яхта с белыми парусами идёт по спокойной воде" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Шкипер</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=5">Навигация и работа с картой</a></h3>
@@ -166,7 +184,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="6" data-category="skipper" data-price="9800" data-available="true">
-                        <img class="product-card__image" src="images/cruiser-b.jpg" alt="Прогулочная яхта идёт под парусами" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/cruiser-b-480.webp 480w, images/cruiser-b.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/cruiser-b.jpg" srcset="images/cruiser-b-480.jpg 480w, images/cruiser-b.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Прогулочная яхта идёт под парусами" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Шкипер</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=6">Швартовка и управление под мотором</a></h3>
@@ -183,7 +204,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="7" data-category="kids" data-price="9500" data-available="true">
-                        <img class="product-card__image" src="images/optimist-beach.jpg" alt="Детские лодки с разноцветными парусами на песчаном берегу" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/optimist-beach-480.webp 480w, images/optimist-beach.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/optimist-beach.jpg" srcset="images/optimist-beach-480.jpg 480w, images/optimist-beach.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Детские лодки с разноцветными парусами на песчаном берегу" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Детская группа</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=7">Детская группа 7-10 лет</a></h3>
@@ -200,7 +224,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="8" data-category="kids" data-price="11000" data-available="true">
-                        <img class="product-card__image" src="images/optimist-group.jpg" alt="Группа маленьких парусных лодок на воде" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/optimist-group-480.webp 480w, images/optimist-group.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/optimist-group.jpg" srcset="images/optimist-group-480.jpg 480w, images/optimist-group.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Группа маленьких парусных лодок на воде" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Детская группа</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=8">Юный капитан 11-14 лет</a></h3>
@@ -217,7 +244,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="9" data-category="regatta" data-price="15000" data-available="true">
-                        <img class="product-card__image" src="images/regatta-fd.jpg" alt="Три гоночные лодки с белыми парусами идут по дистанции" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/regatta-fd-480.webp 480w, images/regatta-fd.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/regatta-fd.jpg" srcset="images/regatta-fd-480.jpg 480w, images/regatta-fd.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Три гоночные лодки с белыми парусами идут по дистанции" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Регатный</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=9">Подготовка к клубной регате</a></h3>
@@ -234,7 +264,10 @@
                         </div>
                     </article>
                     <article class="product-card" data-id="10" data-category="regatta" data-price="17500" data-available="false">
-                        <img class="product-card__image" src="images/racer-red.jpg" alt="Гоночная яхта с красным спинакером" width="800" height="600">
+                        <picture class="product-card__picture">
+                            <source type="image/webp" srcset="images/racer-red-480.webp 480w, images/racer-red.webp 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw">
+                            <img class="product-card__image" src="images/racer-red.jpg" srcset="images/racer-red-480.jpg 480w, images/racer-red.jpg 800w" sizes="(min-width: 1200px) 260px, (min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Гоночная яхта с красным спинакером" loading="lazy">
+                        </picture>
                         <div class="product-card__body">
                             <p class="product-card__category">Регатный</p>
                             <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=10">Тактика гонки и работа экипажа</a></h3>

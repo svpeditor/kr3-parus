@@ -7,12 +7,15 @@
     <title>Флот | Парус</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -37,7 +40,10 @@
                     <p>Яхту можно арендовать с капитаном нашего клуба или без него, если вы уже умеете ею управлять.</p>
                     <p><a class="button button--primary" href="order.html#calc">Рассчитать аренду</a></p>
                 </div>
-                <img class="split__image" src="images/harbour-masts.jpg" alt="Яхты стоят у причала, над ними ряд мачт" width="800" height="600">
+                <picture class="split__picture">
+                    <source type="image/webp" srcset="images/harbour-masts-480.webp 480w, images/harbour-masts.webp 800w" sizes="(min-width: 768px) 520px, 100vw">
+                    <img class="split__image" src="images/harbour-masts.jpg" srcset="images/harbour-masts-480.jpg 480w, images/harbour-masts.jpg 800w" sizes="(min-width: 768px) 520px, 100vw" width="800" height="600" alt="Яхты стоят у причала, над ними ряд мачт">
+                </picture>
             </div>
         </section>
 
@@ -45,7 +51,10 @@
             <h2 class="section__title">Лодки и яхты</h2>
             <div class="products-grid" id="fleet-list">
                 <article class="product-card" data-id="1" data-rent-capt="0" data-rent-free="0">
-                    <img class="product-card__image" src="images/optimist-pair.jpg" alt="Две детские лодки с белыми парусами на спокойной воде" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/optimist-pair-480.webp 480w, images/optimist-pair.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/optimist-pair.jpg" srcset="images/optimist-pair-480.jpg 480w, images/optimist-pair.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Две детские лодки с белыми парусами на спокойной воде" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Детская парусная лодка</p>
                         <h3 class="product-card__title">Оптимист</h3>
@@ -68,7 +77,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="2" data-rent-capt="3500" data-rent-free="2500">
-                    <img class="product-card__image" src="images/laser.jpg" alt="Спортсмен на одиночной лодке с красным парусом" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/laser-480.webp 480w, images/laser.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/laser.jpg" srcset="images/laser-480.jpg 480w, images/laser.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Спортсмен на одиночной лодке с красным парусом" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Одиночная спортивная лодка</p>
                         <h3 class="product-card__title">Лазер</h3>
@@ -91,7 +103,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="3" data-rent-capt="4500" data-rent-free="3800">
-                    <img class="product-card__image" src="images/regatta-fd.jpg" alt="Три гоночные лодки с белыми парусами идут по дистанции" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/regatta-fd-480.webp 480w, images/regatta-fd.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/regatta-fd.jpg" srcset="images/regatta-fd-480.jpg 480w, images/regatta-fd.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Три гоночные лодки с белыми парусами идут по дистанции" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Гоночная лодка для двоих</p>
                         <h3 class="product-card__title">Летучий голландец</h3>
@@ -114,7 +129,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="4" data-rent-capt="6500" data-rent-free="5000">
-                    <img class="product-card__image" src="images/small-sloop.jpg" alt="Небольшая белая яхта на воде у берега" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/small-sloop-480.webp 480w, images/small-sloop.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/small-sloop.jpg" srcset="images/small-sloop-480.jpg 480w, images/small-sloop.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Небольшая белая яхта на воде у берега" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Малая яхта</p>
                         <h3 class="product-card__title">Ласточка</h3>
@@ -137,7 +155,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="5" data-rent-capt="12000" data-rent-free="9500">
-                    <img class="product-card__image" src="images/cruiser-b.jpg" alt="Прогулочная яхта идёт под парусами" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/cruiser-b-480.webp 480w, images/cruiser-b.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/cruiser-b.jpg" srcset="images/cruiser-b-480.jpg 480w, images/cruiser-b.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Прогулочная яхта идёт под парусами" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Прогулочная яхта</p>
                         <h3 class="product-card__title">Ветер</h3>
@@ -160,7 +181,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="6" data-rent-capt="16000" data-rent-free="13000">
-                    <img class="product-card__image" src="images/racer-red.jpg" alt="Гоночная яхта с красным спинакером" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/racer-red-480.webp 480w, images/racer-red.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/racer-red.jpg" srcset="images/racer-red-480.jpg 480w, images/racer-red.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Гоночная яхта с красным спинакером" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Гоночная яхта</p>
                         <h3 class="product-card__title">Заря</h3>
@@ -188,44 +212,46 @@
         <section class="section" id="rent">
             <h2 class="section__title">Аренда с капитаном и без</h2>
             <p class="section__text">С капитаном вы идёте как пассажир или учитесь у шкипера. Без капитана яхту сдаём тем, кто подтвердил опыт. В цену входят топливо, спасательные жилеты и страховка лодки.</p>
-            <table class="info-table">
-                <caption id="rent-caption">Цены аренды за день</caption>
-                <thead>
-                    <tr><th>Лодка</th><th>С капитаном</th><th>Без капитана</th><th>Что нужно для аренды без капитана</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Лазер</th>
-                        <td>3 500 руб.</td>
-                        <td>2 500 руб.</td>
-                        <td>Проверка навыков на воде</td>
-                    </tr>
-                    <tr>
-                        <th>Летучий голландец</th>
-                        <td>4 500 руб.</td>
-                        <td>3 800 руб.</td>
-                        <td>Проверка навыков на воде</td>
-                    </tr>
-                    <tr>
-                        <th>Ласточка</th>
-                        <td>6 500 руб.</td>
-                        <td>5 000 руб.</td>
-                        <td>Опыт хода на яхте от 10 часов</td>
-                    </tr>
-                    <tr>
-                        <th>Ветер</th>
-                        <td>12 000 руб.</td>
-                        <td>9 500 руб.</td>
-                        <td>Удостоверение шкипера или экзамен в клубе</td>
-                    </tr>
-                    <tr>
-                        <th>Заря</th>
-                        <td>16 000 руб.</td>
-                        <td>13 000 руб.</td>
-                        <td>Только шкиперы клуба</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table class="info-table">
+                    <caption id="rent-caption">Цены аренды за день</caption>
+                    <thead>
+                        <tr><th>Лодка</th><th>С капитаном</th><th>Без капитана</th><th>Что нужно для аренды без капитана</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Лазер</th>
+                            <td>3 500 руб.</td>
+                            <td>2 500 руб.</td>
+                            <td>Проверка навыков на воде</td>
+                        </tr>
+                        <tr>
+                            <th>Летучий голландец</th>
+                            <td>4 500 руб.</td>
+                            <td>3 800 руб.</td>
+                            <td>Проверка навыков на воде</td>
+                        </tr>
+                        <tr>
+                            <th>Ласточка</th>
+                            <td>6 500 руб.</td>
+                            <td>5 000 руб.</td>
+                            <td>Опыт хода на яхте от 10 часов</td>
+                        </tr>
+                        <tr>
+                            <th>Ветер</th>
+                            <td>12 000 руб.</td>
+                            <td>9 500 руб.</td>
+                            <td>Удостоверение шкипера или экзамен в клубе</td>
+                        </tr>
+                        <tr>
+                            <th>Заря</th>
+                            <td>16 000 руб.</td>
+                            <td>13 000 руб.</td>
+                            <td>Только шкиперы клуба</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <ul>
                 <li>Залог при аренде без капитана 5 000 руб., возвращается после осмотра лодки.</li>
                 <li>Аренда на день означает с 10:00 до 20:00.</li>
@@ -243,71 +269,71 @@
                 </div>
                 <div class="form__result compare__result" id="compare-result" aria-live="polite"></div>
             </form>
-            <table class="info-table compare-table">
+            <table class="info-table table--cards compare-table">
                 <caption id="compare-caption">Характеристики лодок, цена аренды за день</caption>
                 <thead>
                     <tr><th>Лодка</th><th>Длина</th><th>Экипаж</th><th>Койки</th><th>Осадка</th><th>Парус</th><th>С капитаном</th><th>Без капитана</th></tr>
                 </thead>
                 <tbody>
                     <tr data-id="1">
-                        <td><strong>Оптимист</strong></td>
-                        <td>2,3 м</td>
-                        <td>до 1 чел.</td>
-                        <td>нет</td>
-                        <td>до 0,7 м</td>
-                        <td>3,3 м²</td>
-                        <td>нет</td>
-                        <td>нет</td>
+                        <td data-label="Лодка"><strong>Оптимист</strong></td>
+                        <td data-label="Длина">2,3 м</td>
+                        <td data-label="Экипаж">до 1 чел.</td>
+                        <td data-label="Койки">нет</td>
+                        <td data-label="Осадка">до 0,7 м</td>
+                        <td data-label="Парус">3,3 м²</td>
+                        <td data-label="С капитаном">нет</td>
+                        <td data-label="Без капитана">нет</td>
                     </tr>
                     <tr data-id="2">
-                        <td><strong>Лазер</strong></td>
-                        <td>4,2 м</td>
-                        <td>до 1 чел.</td>
-                        <td>нет</td>
-                        <td>до 0,8 м</td>
-                        <td>7,1 м²</td>
-                        <td>3 500 руб.</td>
-                        <td>2 500 руб.</td>
+                        <td data-label="Лодка"><strong>Лазер</strong></td>
+                        <td data-label="Длина">4,2 м</td>
+                        <td data-label="Экипаж">до 1 чел.</td>
+                        <td data-label="Койки">нет</td>
+                        <td data-label="Осадка">до 0,8 м</td>
+                        <td data-label="Парус">7,1 м²</td>
+                        <td data-label="С капитаном">3 500 руб.</td>
+                        <td data-label="Без капитана">2 500 руб.</td>
                     </tr>
                     <tr data-id="3">
-                        <td><strong>Летучий голландец</strong></td>
-                        <td>6,05 м</td>
-                        <td>до 2 чел.</td>
-                        <td>нет</td>
-                        <td>до 1,1 м</td>
-                        <td>около 16 м²</td>
-                        <td>4 500 руб.</td>
-                        <td>3 800 руб.</td>
+                        <td data-label="Лодка"><strong>Летучий голландец</strong></td>
+                        <td data-label="Длина">6,05 м</td>
+                        <td data-label="Экипаж">до 2 чел.</td>
+                        <td data-label="Койки">нет</td>
+                        <td data-label="Осадка">до 1,1 м</td>
+                        <td data-label="Парус">около 16 м²</td>
+                        <td data-label="С капитаном">4 500 руб.</td>
+                        <td data-label="Без капитана">3 800 руб.</td>
                     </tr>
                     <tr data-id="4">
-                        <td><strong>Ласточка</strong></td>
-                        <td>6,5 м</td>
-                        <td>до 4 чел.</td>
-                        <td>2</td>
-                        <td>1,1 м</td>
-                        <td>22 м²</td>
-                        <td>6 500 руб.</td>
-                        <td>5 000 руб.</td>
+                        <td data-label="Лодка"><strong>Ласточка</strong></td>
+                        <td data-label="Длина">6,5 м</td>
+                        <td data-label="Экипаж">до 4 чел.</td>
+                        <td data-label="Койки">2</td>
+                        <td data-label="Осадка">1,1 м</td>
+                        <td data-label="Парус">22 м²</td>
+                        <td data-label="С капитаном">6 500 руб.</td>
+                        <td data-label="Без капитана">5 000 руб.</td>
                     </tr>
                     <tr data-id="5">
-                        <td><strong>Ветер</strong></td>
-                        <td>9,5 м</td>
-                        <td>до 6 чел.</td>
-                        <td>4</td>
-                        <td>1,6 м</td>
-                        <td>48 м²</td>
-                        <td>12 000 руб.</td>
-                        <td>9 500 руб.</td>
+                        <td data-label="Лодка"><strong>Ветер</strong></td>
+                        <td data-label="Длина">9,5 м</td>
+                        <td data-label="Экипаж">до 6 чел.</td>
+                        <td data-label="Койки">4</td>
+                        <td data-label="Осадка">1,6 м</td>
+                        <td data-label="Парус">48 м²</td>
+                        <td data-label="С капитаном">12 000 руб.</td>
+                        <td data-label="Без капитана">9 500 руб.</td>
                     </tr>
                     <tr data-id="6">
-                        <td><strong>Заря</strong></td>
-                        <td>11 м</td>
-                        <td>до 8 чел.</td>
-                        <td>4</td>
-                        <td>2,0 м</td>
-                        <td>70 м²</td>
-                        <td>16 000 руб.</td>
-                        <td>13 000 руб.</td>
+                        <td data-label="Лодка"><strong>Заря</strong></td>
+                        <td data-label="Длина">11 м</td>
+                        <td data-label="Экипаж">до 8 чел.</td>
+                        <td data-label="Койки">4</td>
+                        <td data-label="Осадка">2,0 м</td>
+                        <td data-label="Парус">70 м²</td>
+                        <td data-label="С капитаном">16 000 руб.</td>
+                        <td data-label="Без капитана">13 000 руб.</td>
                     </tr>
                 </tbody>
             </table>
