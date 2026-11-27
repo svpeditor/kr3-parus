@@ -11,13 +11,15 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="courses.html">Курсы</a></li>
@@ -25,13 +27,13 @@
                     <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="account.html">Личный кабинет</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <h1>Контакты</h1>
         <section class="section" id="info">
             <div class="contacts-grid">
@@ -78,21 +80,22 @@
         <section class="section" id="question">
             <h2 class="section__title">Вопрос инструктору</h2>
             <form class="form" id="question-form" action="contacts.html" method="get">
+                <p class="form__note">Поля, отмеченные звёздочкой, обязательны для заполнения.</p>
                 <div class="form__row">
                     <div class="form__group">
-                        <label class="form__label" for="question-name">Имя</label>
-                        <input class="form__input" id="question-name" name="name" type="text" required>
+                        <label class="form__label" for="question-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+                        <input class="form__input" id="question-name" name="name" type="text" required autocomplete="name" aria-describedby="question-name-error">
                         <p class="form__error" id="question-name-error"></p>
                     </div>
                     <div class="form__group">
-                        <label class="form__label" for="question-email">E-mail</label>
-                        <input class="form__input" id="question-email" name="email" type="email" required>
+                        <label class="form__label" for="question-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+                        <input class="form__input" id="question-email" name="email" type="email" required autocomplete="email" aria-describedby="question-email-error">
                         <p class="form__error" id="question-email-error"></p>
                     </div>
                 </div>
                 <div class="form__group">
                     <label class="form__label" for="question-topic">Тема вопроса</label>
-                    <select class="form__select" id="question-topic" name="topic">
+                    <select class="form__select" id="question-topic" name="topic" aria-describedby="question-topic-error">
                         <option value="courses">Курсы и обучение</option>
                         <option value="rent">Аренда яхт</option>
                         <option value="kids">Детская группа</option>
@@ -101,8 +104,8 @@
                     <p class="form__error" id="question-topic-error"></p>
                 </div>
                 <div class="form__group">
-                    <label class="form__label" for="question-text">Ваш вопрос</label>
-                    <textarea class="form__textarea" id="question-text" name="text" rows="5" required></textarea>
+                    <label class="form__label" for="question-text">Ваш вопрос <span class="form__required" aria-hidden="true">*</span></label>
+                    <textarea class="form__textarea" id="question-text" name="text" rows="5" required aria-describedby="question-text-error"></textarea>
                     <p class="form__error" id="question-text-error"></p>
                 </div>
                 <div class="form__actions">

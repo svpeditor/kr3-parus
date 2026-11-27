@@ -6,7 +6,7 @@
     /* Основные цвета проекта */
     --color-bg: #ffffff;
     --color-text: #222222;
-    --color-muted: #777777;
+    --color-muted: #595959;
     --color-primary: #0057b8;
     --color-primary-dark: #003f86;
     --color-border: #dddddd;
@@ -650,4 +650,65 @@ button--primary (основная) или button--secondary (второстеп�
 
 .faq__answer {
     margin: var(--space-sm) 0 0;
+}
+
+/* ===============================
+12. Доступность
+=============================== */
+
+/*
+Видимый фокус при переходе клавишей Tab на всех интерактивных
+элементах: ссылки, кнопки, поля, вопросы, прокручиваемая обёртка таблицы.
+Рамка 3px с отступом заметна и на синих кнопках.
+*/
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/*
+Ссылка пропуска к основному содержимому. Спрятана за верхним краем
+экрана и появляется только при фокусе с клавиатуры.
+display: none не используем, иначе до неё нельзя дойти клавишей Tab.
+*/
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: var(--space-md);
+    z-index: 1000;
+    padding: var(--space-sm) 12px;
+    color: var(--color-white);
+    background-color: #111111;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+    top: var(--space-md);
+    color: var(--color-white);
+}
+
+/*
+На main фокус переходит после ссылки пропуска (tabindex="-1").
+Рамку вокруг всего содержимого страницы не рисуем.
+*/
+.main:focus {
+    outline: none;
+}
+
+/*
+Звёздочка у обязательных полей. Цвет не единственный признак:
+рядом с формой есть пояснение, а у поля стоит атрибут required.
+*/
+.form__required {
+    color: var(--color-danger);
+}
+
+/* Поле с ошибкой выделяется рамкой и текстом сообщения под полем */
+.form__input[aria-invalid="true"],
+.form__select[aria-invalid="true"],
+.form__textarea[aria-invalid="true"] {
+    border-color: var(--color-danger);
+    border-width: 2px;
 }

@@ -11,15 +11,17 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="courses.html">Курсы</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="fleet.html">Флот</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
@@ -31,7 +33,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <section class="hero">
             <div class="hero__content">
                 <h1 class="hero__title">Парусная школа и яхт-клуб "Парус"</h1>
@@ -155,7 +157,7 @@
             <table class="info-table table--cards">
                 <caption id="trips-caption">Ближайшие выходы и занятия</caption>
                 <thead>
-                    <tr><th>Дата и время</th><th>Название</th><th>Лодка</th><th>Свободно мест</th><th>Цена</th><th>Запись</th></tr>
+                    <tr><th scope="col">Дата и время</th><th scope="col">Название</th><th scope="col">Лодка</th><th scope="col">Свободно мест</th><th scope="col">Цена</th><th scope="col">Запись</th></tr>
                 </thead>
                 <tbody>
                     <tr data-id="1" data-type="trip" data-free="3">
@@ -218,26 +220,27 @@
             <button class="button button--primary" type="button" data-open-modal>Оставить заявку</button>
         </section>
 
-        <dialog class="modal" id="quick-dialog">
+        <dialog class="modal" id="quick-dialog" aria-labelledby="quick-dialog-title">
             <div class="modal__head">
                 <h2 class="modal__title" id="quick-dialog-title">Быстрая заявка</h2>
-                <button class="modal__close" type="button" data-close-modal>&times;</button>
+                <button class="modal__close" type="button" data-close-modal aria-label="Закрыть окно"><span aria-hidden="true">&times;</span></button>
             </div>
             <form class="form" id="quick-form" action="order.html" method="get">
+                <p class="form__note">Поля, отмеченные звёздочкой, обязательны для заполнения.</p>
                 <div class="form__group">
-                    <label class="form__label" for="quick-name">Имя</label>
-                    <input class="form__input" id="quick-name" name="name" type="text" required>
+                    <label class="form__label" for="quick-name">Имя <span class="form__required" aria-hidden="true">*</span></label>
+                    <input class="form__input" id="quick-name" name="name" type="text" required autocomplete="name" autofocus aria-describedby="quick-name-error">
                     <p class="form__error" id="quick-name-error"></p>
                 </div>
                 <div class="form__group">
-                    <label class="form__label" for="quick-phone">Телефон</label>
-                    <input class="form__input" id="quick-phone" name="phone" type="tel" required>
+                    <label class="form__label" for="quick-phone">Телефон <span class="form__required" aria-hidden="true">*</span></label>
+                    <input class="form__input" id="quick-phone" name="phone" type="tel" required autocomplete="tel" aria-describedby="quick-phone-hint quick-phone-error">
                     <p class="form__note" id="quick-phone-hint">Например, +7 999 123-45-67</p>
                     <p class="form__error" id="quick-phone-error"></p>
                 </div>
                 <div class="form__group">
                     <label class="form__label" for="quick-interest">Что интересует</label>
-                    <select class="form__select" id="quick-interest" name="interest">
+                    <select class="form__select" id="quick-interest" name="interest" aria-describedby="quick-interest-error">
                         <option value="course">Курс</option>
                         <option value="trip">Выход под парусом</option>
                         <option value="rent">Аренда яхты</option>

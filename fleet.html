@@ -11,17 +11,19 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="courses.html">Курсы</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="fleet.html">Флот</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="fleet.html" aria-current="page">Флот</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="account.html">Личный кабинет</a></li>
@@ -31,7 +33,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <h1>Флот клуба</h1>
         <section class="section" id="intro">
             <div class="split">
@@ -212,39 +214,39 @@
         <section class="section" id="rent">
             <h2 class="section__title">Аренда с капитаном и без</h2>
             <p class="section__text">С капитаном вы идёте как пассажир или учитесь у шкипера. Без капитана яхту сдаём тем, кто подтвердил опыт. В цену входят топливо, спасательные жилеты и страховка лодки.</p>
-            <div class="table-wrapper">
+            <div class="table-wrapper" tabindex="0" role="region" aria-labelledby="rent-caption">
                 <table class="info-table">
                     <caption id="rent-caption">Цены аренды за день</caption>
                     <thead>
-                        <tr><th>Лодка</th><th>С капитаном</th><th>Без капитана</th><th>Что нужно для аренды без капитана</th></tr>
+                        <tr><th scope="col">Лодка</th><th scope="col">С капитаном</th><th scope="col">Без капитана</th><th scope="col">Что нужно для аренды без капитана</th></tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Лазер</th>
+                            <th scope="row">Лазер</th>
                             <td>3 500 руб.</td>
                             <td>2 500 руб.</td>
                             <td>Проверка навыков на воде</td>
                         </tr>
                         <tr>
-                            <th>Летучий голландец</th>
+                            <th scope="row">Летучий голландец</th>
                             <td>4 500 руб.</td>
                             <td>3 800 руб.</td>
                             <td>Проверка навыков на воде</td>
                         </tr>
                         <tr>
-                            <th>Ласточка</th>
+                            <th scope="row">Ласточка</th>
                             <td>6 500 руб.</td>
                             <td>5 000 руб.</td>
                             <td>Опыт хода на яхте от 10 часов</td>
                         </tr>
                         <tr>
-                            <th>Ветер</th>
+                            <th scope="row">Ветер</th>
                             <td>12 000 руб.</td>
                             <td>9 500 руб.</td>
                             <td>Удостоверение шкипера или экзамен в клубе</td>
                         </tr>
                         <tr>
-                            <th>Заря</th>
+                            <th scope="row">Заря</th>
                             <td>16 000 руб.</td>
                             <td>13 000 руб.</td>
                             <td>Только шкиперы клуба</td>
@@ -272,7 +274,7 @@
             <table class="info-table table--cards compare-table">
                 <caption id="compare-caption">Характеристики лодок, цена аренды за день</caption>
                 <thead>
-                    <tr><th>Лодка</th><th>Длина</th><th>Экипаж</th><th>Койки</th><th>Осадка</th><th>Парус</th><th>С капитаном</th><th>Без капитана</th></tr>
+                    <tr><th scope="col">Лодка</th><th scope="col">Длина</th><th scope="col">Экипаж</th><th scope="col">Койки</th><th scope="col">Осадка</th><th scope="col">Парус</th><th scope="col">С капитаном</th><th scope="col">Без капитана</th></tr>
                 </thead>
                 <tbody>
                     <tr data-id="1">

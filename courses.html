@@ -11,16 +11,18 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="courses.html">Курсы</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="courses.html" aria-current="page">Курсы</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="fleet.html">Флот</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
@@ -31,24 +33,24 @@
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <h1>Курсы</h1>
         <p class="section__text">Выберите курс по уровню и возрасту. Если не знаете, с чего начать, пройдите короткий тест внизу страницы.</p>
 
         <div class="catalog-layout">
             <aside class="catalog-layout__filters" aria-label="Поиск и фильтры">
                 <div class="catalog-filters" id="catalog-filters">
-                    <button class="catalog-filters__toggle" type="button">Поиск и фильтры</button>
+                    <button class="catalog-filters__toggle" type="button" aria-expanded="false" aria-controls="catalog-form">Поиск и фильтры</button>
                     <h2 class="catalog-filters__title">Поиск и фильтры</h2>
                     <form class="form catalog-filters__form" id="catalog-form" action="courses.html" method="get">
                         <div class="form__group">
                             <label class="form__label" for="filter-search">Поиск по названию</label>
-                            <input class="form__input" id="filter-search" name="q" type="search">
+                            <input class="form__input" id="filter-search" name="q" type="search" aria-describedby="filter-search-error">
                             <p class="form__error" id="filter-search-error"></p>
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="filter-category">Категория</label>
-                            <select class="form__select" id="filter-category" name="category">
+                            <select class="form__select" id="filter-category" name="category" aria-describedby="filter-category-error">
                                 <option value="">Все категории</option>
                                 <option value="beginner">Для новичков</option>
                                 <option value="skipper">Шкипер</option>
@@ -59,7 +61,7 @@
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="filter-sort">Сортировка</label>
-                            <select class="form__select" id="filter-sort" name="sort">
+                            <select class="form__select" id="filter-sort" name="sort" aria-describedby="filter-sort-error">
                                 <option value="">По умолчанию</option>
                                 <option value="price-asc">Сначала дешёвые</option>
                                 <option value="price-desc">Сначала дорогие</option>
@@ -292,6 +294,7 @@
             <h2 class="section__title">Какой курс мне подходит</h2>
             <p class="section__text">Ответьте на три вопроса, и мы подскажем курс.</p>
             <form class="form quiz" id="quiz-form" action="courses.html" method="get">
+                <p class="form__note">Поля, отмеченные звёздочкой, обязательны для заполнения.</p>
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">1. Вы уже ходили под парусом?</legend>
                 <div class="form__check">
