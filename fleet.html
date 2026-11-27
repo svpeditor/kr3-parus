@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лодки и яхты клуба Парус: характеристики, аренда с капитаном и без, сравнение.">
+    <title>Флот | Парус</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">Парус</a>
+
+            <nav class="site-nav">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="courses.html">Курсы</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="fleet.html">Флот</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="account.html">Личный кабинет</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <h1>Флот клуба</h1>
+        <section class="section" id="intro">
+            <div class="split">
+                <div class="split__text">
+                    <p>В клубе шесть лодок и яхт. На детских лодках и на Лазерах идут занятия, на яхтах мы ходим в выходы и сдаём их в аренду. Все лодки проходят осмотр перед сезоном и после каждого выхода.</p>
+                    <p>Яхту можно арендовать с капитаном нашего клуба или без него, если вы уже умеете ею управлять.</p>
+                    <p><a class="button button--primary" href="order.html#calc">Рассчитать аренду</a></p>
+                </div>
+                <img class="split__image" src="images/harbour-masts.jpg" alt="Яхты стоят у причала, над ними ряд мачт" width="800" height="600">
+            </div>
+        </section>
+
+        <section class="section" id="boats">
+            <h2 class="section__title">Лодки и яхты</h2>
+            <div class="products-grid" id="fleet-list">
+                <article class="product-card" data-id="1" data-rent-capt="0" data-rent-free="0">
+                    <img class="product-card__image" src="images/optimist-pair.jpg" alt="Две детские лодки с белыми парусами на спокойной воде" width="800" height="600">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Детская парусная лодка</p>
+                        <h3 class="product-card__title">Оптимист</h3>
+                        <p class="product-card__description">Лодка для детской группы. В аренду не сдаётся, на ней идут занятия.</p>
+                        <dl class="specs">
+                            <dt>Длина</dt>
+                            <dd>2,3 м</dd>
+                            <dt>Экипаж</dt>
+                            <dd>до 1 чел.</dd>
+                            <dt>Парус</dt>
+                            <dd>3,3 м²</dd>
+                        </dl>
+                        <p class="product-card__price">Только для занятий</p>
+                        <div class="product-card__actions">
+                            <div class="form__check">
+                                <input id="compare-1" name="compare" type="checkbox" value="1" data-compare>
+                                <label for="compare-1">Сравнить Оптимист</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="2" data-rent-capt="3500" data-rent-free="2500">
+                    <img class="product-card__image" src="images/laser.jpg" alt="Спортсмен на одиночной лодке с красным парусом" width="800" height="600">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Одиночная спортивная лодка</p>
+                        <h3 class="product-card__title">Лазер</h3>
+                        <p class="product-card__description">Быстрая лодка для одного человека. Без инструктора сдаём после проверки навыков.</p>
+                        <dl class="specs">
+                            <dt>Длина</dt>
+                            <dd>4,2 м</dd>
+                            <dt>Экипаж</dt>
+                            <dd>до 1 чел.</dd>
+                            <dt>Парус</dt>
+                            <dd>7,1 м²</dd>
+                        </dl>
+                        <p class="product-card__price">Аренда от 2 500 руб. в день</p>
+                        <div class="product-card__actions">
+                            <div class="form__check">
+                                <input id="compare-2" name="compare" type="checkbox" value="2" data-compare>
+                                <label for="compare-2">Сравнить Лазер</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="3" data-rent-capt="4500" data-rent-free="3800">
+                    <img class="product-card__image" src="images/regatta-fd.jpg" alt="Три гоночные лодки с белыми парусами идут по дистанции" width="800" height="600">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Гоночная лодка для двоих</p>
+                        <h3 class="product-card__title">Летучий голландец</h3>
+                        <p class="product-card__description">Лодка для экипажа из двух человек. На ней идут занятия регатной группы.</p>
+                        <dl class="specs">
+                            <dt>Длина</dt>
+                            <dd>6,05 м</dd>
+                            <dt>Экипаж</dt>
+                            <dd>до 2 чел.</dd>
+                            <dt>Парус</dt>
+                            <dd>около 16 м²</dd>
+                        </dl>
+                        <p class="product-card__price">Аренда от 3 800 руб. в день</p>
+                        <div class="product-card__actions">
+                            <div class="form__check">
+                                <input id="compare-3" name="compare" type="checkbox" value="3" data-compare>
+                                <label for="compare-3">Сравнить Летучий голландец</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="4" data-rent-capt="6500" data-rent-free="5000">
+                    <img class="product-card__image" src="images/small-sloop.jpg" alt="Небольшая белая яхта на воде у берега" width="800" height="600">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Малая яхта</p>
+                        <h3 class="product-card__title">Ласточка</h3>
+                        <p class="product-card__description">Устойчивая яхта для первых выходов с семьёй или друзьями. Есть небольшая каюта.</p>
+                        <dl class="specs">
+                            <dt>Длина</dt>
+                            <dd>6,5 м</dd>
+                            <dt>Экипаж</dt>
+                            <dd>до 4 чел.</dd>
+                            <dt>Парус</dt>
+                            <dd>22 м²</dd>
+                        </dl>
+                        <p class="product-card__price">Аренда от 5 000 руб. в день</p>
+                        <div class="product-card__actions">
+                            <div class="form__check">
+                                <input id="compare-4" name="compare" type="checkbox" value="4" data-compare>
+                                <label for="compare-4">Сравнить Ласточка</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="5" data-rent-capt="12000" data-rent-free="9500">
+                    <img class="product-card__image" src="images/cruiser-b.jpg" alt="Прогулочная яхта идёт под парусами" width="800" height="600">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Прогулочная яхта</p>
+                        <h3 class="product-card__title">Ветер</h3>
+                        <p class="product-card__description">Основная яхта клуба для выходов на день. Каюта, мотор, камбуз.</p>
+                        <dl class="specs">
+                            <dt>Длина</dt>
+                            <dd>9,5 м</dd>
+                            <dt>Экипаж</dt>
+                            <dd>до 6 чел.</dd>
+                            <dt>Парус</dt>
+                            <dd>48 м²</dd>
+                        </dl>
+                        <p class="product-card__price">Аренда от 9 500 руб. в день</p>
+                        <div class="product-card__actions">
+                            <div class="form__check">
+                                <input id="compare-5" name="compare" type="checkbox" value="5" data-compare>
+                                <label for="compare-5">Сравнить Ветер</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card" data-id="6" data-rent-capt="16000" data-rent-free="13000">
+                    <img class="product-card__image" src="images/racer-red.jpg" alt="Гоночная яхта с красным спинакером" width="800" height="600">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Гоночная яхта</p>
+                        <h3 class="product-card__title">Заря</h3>
+                        <p class="product-card__description">Быстрая яхта для регат. Без капитана сдаём только шкиперам клуба.</p>
+                        <dl class="specs">
+                            <dt>Длина</dt>
+                            <dd>11 м</dd>
+                            <dt>Экипаж</dt>
+                            <dd>до 8 чел.</dd>
+                            <dt>Парус</dt>
+                            <dd>70 м²</dd>
+                        </dl>
+                        <p class="product-card__price">Аренда от 13 000 руб. в день</p>
+                        <div class="product-card__actions">
+                            <div class="form__check">
+                                <input id="compare-6" name="compare" type="checkbox" value="6" data-compare>
+                                <label for="compare-6">Сравнить Заря</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="rent">
+            <h2 class="section__title">Аренда с капитаном и без</h2>
+            <p class="section__text">С капитаном вы идёте как пассажир или учитесь у шкипера. Без капитана яхту сдаём тем, кто подтвердил опыт. В цену входят топливо, спасательные жилеты и страховка лодки.</p>
+            <table class="info-table">
+                <caption id="rent-caption">Цены аренды за день</caption>
+                <thead>
+                    <tr><th>Лодка</th><th>С капитаном</th><th>Без капитана</th><th>Что нужно для аренды без капитана</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Лазер</th>
+                        <td>3 500 руб.</td>
+                        <td>2 500 руб.</td>
+                        <td>Проверка навыков на воде</td>
+                    </tr>
+                    <tr>
+                        <th>Летучий голландец</th>
+                        <td>4 500 руб.</td>
+                        <td>3 800 руб.</td>
+                        <td>Проверка навыков на воде</td>
+                    </tr>
+                    <tr>
+                        <th>Ласточка</th>
+                        <td>6 500 руб.</td>
+                        <td>5 000 руб.</td>
+                        <td>Опыт хода на яхте от 10 часов</td>
+                    </tr>
+                    <tr>
+                        <th>Ветер</th>
+                        <td>12 000 руб.</td>
+                        <td>9 500 руб.</td>
+                        <td>Удостоверение шкипера или экзамен в клубе</td>
+                    </tr>
+                    <tr>
+                        <th>Заря</th>
+                        <td>16 000 руб.</td>
+                        <td>13 000 руб.</td>
+                        <td>Только шкиперы клуба</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul>
+                <li>Залог при аренде без капитана 5 000 руб., возвращается после осмотра лодки.</li>
+                <li>Аренда на день означает с 10:00 до 20:00.</li>
+                <li>При сильном ветре выход переносим, деньги возвращаем или переносим на другой день.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="compare">
+            <h2 class="section__title">Сравнение яхт</h2>
+            <p class="section__text">Отметьте галочкой две или три лодки в списке выше и нажмите кнопку. Ниже стоит таблица со всеми лодками сразу.</p>
+            <form class="form" id="compare-form" action="fleet.html" method="get">
+                <div class="form__actions">
+                    <button class="button button--primary" type="submit">Сравнить выбранные</button>
+                    <button class="button button--secondary" type="reset">Снять выбор</button>
+                </div>
+                <div class="form__result compare__result" id="compare-result" aria-live="polite"></div>
+            </form>
+            <table class="info-table compare-table">
+                <caption id="compare-caption">Характеристики лодок, цена аренды за день</caption>
+                <thead>
+                    <tr><th>Лодка</th><th>Длина</th><th>Экипаж</th><th>Койки</th><th>Осадка</th><th>Парус</th><th>С капитаном</th><th>Без капитана</th></tr>
+                </thead>
+                <tbody>
+                    <tr data-id="1">
+                        <td><strong>Оптимист</strong></td>
+                        <td>2,3 м</td>
+                        <td>до 1 чел.</td>
+                        <td>нет</td>
+                        <td>до 0,7 м</td>
+                        <td>3,3 м²</td>
+                        <td>нет</td>
+                        <td>нет</td>
+                    </tr>
+                    <tr data-id="2">
+                        <td><strong>Лазер</strong></td>
+                        <td>4,2 м</td>
+                        <td>до 1 чел.</td>
+                        <td>нет</td>
+                        <td>до 0,8 м</td>
+                        <td>7,1 м²</td>
+                        <td>3 500 руб.</td>
+                        <td>2 500 руб.</td>
+                    </tr>
+                    <tr data-id="3">
+                        <td><strong>Летучий голландец</strong></td>
+                        <td>6,05 м</td>
+                        <td>до 2 чел.</td>
+                        <td>нет</td>
+                        <td>до 1,1 м</td>
+                        <td>около 16 м²</td>
+                        <td>4 500 руб.</td>
+                        <td>3 800 руб.</td>
+                    </tr>
+                    <tr data-id="4">
+                        <td><strong>Ласточка</strong></td>
+                        <td>6,5 м</td>
+                        <td>до 4 чел.</td>
+                        <td>2</td>
+                        <td>1,1 м</td>
+                        <td>22 м²</td>
+                        <td>6 500 руб.</td>
+                        <td>5 000 руб.</td>
+                    </tr>
+                    <tr data-id="5">
+                        <td><strong>Ветер</strong></td>
+                        <td>9,5 м</td>
+                        <td>до 6 чел.</td>
+                        <td>4</td>
+                        <td>1,6 м</td>
+                        <td>48 м²</td>
+                        <td>12 000 руб.</td>
+                        <td>9 500 руб.</td>
+                    </tr>
+                    <tr data-id="6">
+                        <td><strong>Заря</strong></td>
+                        <td>11 м</td>
+                        <td>до 8 чел.</td>
+                        <td>4</td>
+                        <td>2,0 м</td>
+                        <td>70 м²</td>
+                        <td>16 000 руб.</td>
+                        <td>13 000 руб.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Парус</h2>
+                <p class="site-footer__text">Парусная школа и яхт-клуб на Клязьминском водохранилище. Работаем с мая по октябрь.</p>
+            </div>
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Страницы</h2>
+                <ul class="site-footer__list">
+                    <li class="site-footer__item"><a href="index.html">Главная</a></li>
+                    <li class="site-footer__item"><a href="courses.html">Курсы</a></li>
+                    <li class="site-footer__item"><a href="fleet.html">Флот</a></li>
+                    <li class="site-footer__item"><a href="schedule.html">Расписание</a></li>
+                    <li class="site-footer__item"><a href="order.html">Заявка</a></li>
+                    <li class="site-footer__item"><a href="account.html">Личный кабинет</a></li>
+                    <li class="site-footer__item"><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__col">
+                <h2 class="site-footer__title">Контакты</h2>
+                <p class="site-footer__text">Московская область, Мытищи, пос. Пирогово, Береговая ул., 7</p>
+                <p class="site-footer__text">Телефон: <a href="tel:+79997654321">+7 (999) 765-43-21</a></p>
+                <p class="site-footer__text">E-mail: <a href="mailto:info@parus-club.example">info@parus-club.example</a></p>
+            </div>
+        </div>
+        <p class="site-footer__copy">Учебный проект, сайт вымышленной школы. Контрольная работа №3, группа ЭФБО-07-25. Фотографии со Wikimedia Commons, авторы и лицензии указаны в README репозитория.</p>
+    </footer>
+</body>
+</html>
