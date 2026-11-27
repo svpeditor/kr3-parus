@@ -11,16 +11,18 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="courses.html">Курсы</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="courses.html" aria-current="page">Курсы</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="fleet.html">Флот</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
@@ -31,7 +33,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <article class="course" data-id="1" data-category="beginner" data-price="12900">
             <section class="section">
                 <div class="split">
@@ -88,30 +90,30 @@
 
             <section class="section" id="prices">
                 <h2 class="section__title">Цены</h2>
-                <div class="table-wrapper">
+                <div class="table-wrapper" tabindex="0" role="region" aria-labelledby="price-caption">
                     <table class="info-table">
                         <caption id="price-caption">Стоимость курса</caption>
                         <thead>
-                            <tr><th>Вариант</th><th>Что входит</th><th>Цена</th></tr>
+                            <tr><th scope="col">Вариант</th><th scope="col">Что входит</th><th scope="col">Цена</th></tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th>Группа до 6 человек</th>
+                                <th scope="row">Группа до 6 человек</th>
                                 <td>4 занятия, яхта, спасательный жилет, инструктор</td>
                                 <td>12 900 руб.</td>
                             </tr>
                             <tr>
-                                <th>Мини-группа до 3 человек</th>
+                                <th scope="row">Мини-группа до 3 человек</th>
                                 <td>То же самое, но больше практики у руля</td>
                                 <td>17 900 руб.</td>
                             </tr>
                             <tr>
-                                <th>Индивидуально</th>
+                                <th scope="row">Индивидуально</th>
                                 <td>Занятия в удобные для вас дни</td>
                                 <td>26 000 руб.</td>
                             </tr>
                             <tr>
-                                <th>Пробное занятие</th>
+                                <th scope="row">Пробное занятие</th>
                                 <td>Одно занятие на 2 часа, потом можно записаться на курс</td>
                                 <td>1 500 руб.</td>
                             </tr>

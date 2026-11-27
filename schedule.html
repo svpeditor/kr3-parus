@@ -11,18 +11,20 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="courses.html">Курсы</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="fleet.html">Флот</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="schedule.html">Расписание</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="schedule.html" aria-current="page">Расписание</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="account.html">Личный кабинет</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
@@ -31,7 +33,7 @@
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <h1>Расписание выходов</h1>
         <p class="section__text">Выходы, открытые занятия, регаты и детские группы на июнь. Выберите тип и запишитесь на свободное место.</p>
 
@@ -41,7 +43,7 @@
                 <div class="form__row">
                     <div class="form__group">
                         <label class="form__label" for="schedule-type">Тип</label>
-                        <select class="form__select" id="schedule-type" name="type">
+                        <select class="form__select" id="schedule-type" name="type" aria-describedby="schedule-type-error">
                             <option value="">Все типы</option>
                             <option value="trip">Выход под парусом</option>
                             <option value="lesson">Открытое занятие</option>
@@ -68,7 +70,7 @@
             <table class="info-table table--cards">
                 <caption id="schedule-caption">Расписание на июнь</caption>
                 <thead>
-                    <tr><th>Дата и время</th><th>Тип</th><th>Название</th><th>Лодка</th><th>Свободно мест</th><th>Цена</th><th>Запись</th></tr>
+                    <tr><th scope="col">Дата и время</th><th scope="col">Тип</th><th scope="col">Название</th><th scope="col">Лодка</th><th scope="col">Свободно мест</th><th scope="col">Цена</th><th scope="col">Запись</th></tr>
                 </thead>
                 <tbody>
                     <tr data-id="1" data-type="trip" data-free="3">

@@ -11,27 +11,29 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
 
-            <button class="site-header__toggle" type="button">Меню</button>
+            <button class="site-header__toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="courses.html">Курсы</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="fleet.html">Флот</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="schedule.html">Расписание</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="account.html">Личный кабинет</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="account.html" aria-current="page">Личный кабинет</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main">
+    <main id="main" class="main" tabindex="-1">
         <h1>Личный кабинет</h1>
         <p class="section__text">Здесь можно войти или зарегистрироваться, посмотреть заявки и узнать статус по номеру.</p>
 
@@ -41,13 +43,13 @@
                     <h2 id="login-title">Вход</h2>
                     <form class="form" id="login-form" action="account.html" method="get">
                         <div class="form__group">
-                            <label class="form__label" for="login-name">Логин</label>
-                            <input class="form__input" id="login-name" name="login" type="text" required>
+                            <label class="form__label" for="login-name">Логин <span class="form__required" aria-hidden="true">*</span></label>
+                            <input class="form__input" id="login-name" name="login" type="text" required autocomplete="username" aria-describedby="login-name-error">
                             <p class="form__error" id="login-name-error"></p>
                         </div>
                         <div class="form__group">
-                            <label class="form__label" for="login-password">Пароль</label>
-                            <input class="form__input" id="login-password" type="password" required>
+                            <label class="form__label" for="login-password">Пароль <span class="form__required" aria-hidden="true">*</span></label>
+                            <input class="form__input" id="login-password" type="password" required autocomplete="current-password" aria-describedby="login-password-error">
                             <p class="form__error" id="login-password-error"></p>
                         </div>
                         <button class="button button--primary" type="submit">Войти</button>
@@ -57,25 +59,25 @@
                     <h2 id="register-title">Регистрация</h2>
                     <form class="form" id="register-form" action="account.html" method="get">
                         <div class="form__group">
-                            <label class="form__label" for="reg-name">Логин</label>
-                            <input class="form__input" id="reg-name" name="login" type="text" required>
+                            <label class="form__label" for="reg-name">Логин <span class="form__required" aria-hidden="true">*</span></label>
+                            <input class="form__input" id="reg-name" name="login" type="text" required autocomplete="username" aria-describedby="reg-name-hint reg-name-error">
                             <p class="form__note" id="reg-name-hint">От 3 до 20 символов, латиница и цифры</p>
                             <p class="form__error" id="reg-name-error"></p>
                         </div>
                         <div class="form__group">
-                            <label class="form__label" for="reg-email">E-mail</label>
-                            <input class="form__input" id="reg-email" name="email" type="email" required>
+                            <label class="form__label" for="reg-email">E-mail <span class="form__required" aria-hidden="true">*</span></label>
+                            <input class="form__input" id="reg-email" name="email" type="email" required autocomplete="email" aria-describedby="reg-email-error">
                             <p class="form__error" id="reg-email-error"></p>
                         </div>
                         <div class="form__group">
-                            <label class="form__label" for="reg-password">Пароль</label>
-                            <input class="form__input" id="reg-password" type="password" required>
+                            <label class="form__label" for="reg-password">Пароль <span class="form__required" aria-hidden="true">*</span></label>
+                            <input class="form__input" id="reg-password" type="password" required autocomplete="new-password" aria-describedby="reg-password-hint reg-password-error">
                             <p class="form__note" id="reg-password-hint">Не меньше 6 символов</p>
                             <p class="form__error" id="reg-password-error"></p>
                         </div>
                         <div class="form__group">
-                            <label class="form__label" for="reg-password2">Повторите пароль</label>
-                            <input class="form__input" id="reg-password2" type="password" required>
+                            <label class="form__label" for="reg-password2">Повторите пароль <span class="form__required" aria-hidden="true">*</span></label>
+                            <input class="form__input" id="reg-password2" type="password" required autocomplete="new-password" aria-describedby="reg-password2-error">
                             <p class="form__error" id="reg-password2-error"></p>
                         </div>
                         <button class="button button--primary" type="submit">Зарегистрироваться</button>
@@ -88,8 +90,8 @@
             <h2 class="section__title">Статус заявки по номеру</h2>
             <form class="form" id="status-form" action="account.html" method="get">
                 <div class="form__group">
-                    <label class="form__label" for="status-number">Номер заявки</label>
-                    <input class="form__input" id="status-number" name="number" type="number" required min="1">
+                    <label class="form__label" for="status-number">Номер заявки <span class="form__required" aria-hidden="true">*</span></label>
+                    <input class="form__input" id="status-number" name="number" type="number" required min="1" aria-describedby="status-number-hint status-number-error">
                     <p class="form__note" id="status-number-hint">Номер приходит после отправки заявки, например 1024</p>
                     <p class="form__error" id="status-number-error"></p>
                 </div>
@@ -122,7 +124,7 @@
             <table class="info-table table--cards">
                 <caption id="orders-caption">Список ваших заявок</caption>
                 <thead>
-                    <tr><th>Номер</th><th>Что</th><th>Дата</th><th>Сумма</th><th>Статус</th></tr>
+                    <tr><th scope="col">Номер</th><th scope="col">Что</th><th scope="col">Дата</th><th scope="col">Сумма</th><th scope="col">Статус</th></tr>
                 </thead>
                 <tbody>
                     <tr data-order="1024">
@@ -163,7 +165,7 @@
             <table class="info-table table--cards">
                 <caption id="cart-caption">Выбранные курсы, выходы и аренда</caption>
                 <thead>
-                    <tr><th>Название</th><th>Тип</th><th>Количество</th><th>Цена</th><th>Сумма</th><th>Удалить</th></tr>
+                    <tr><th scope="col">Название</th><th scope="col">Тип</th><th scope="col">Количество</th><th scope="col">Цена</th><th scope="col">Сумма</th><th scope="col">Удалить</th></tr>
                 </thead>
                 <tbody>
                     <tr data-cart="1" data-kind="course" data-price="12900">
