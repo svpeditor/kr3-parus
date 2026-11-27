@@ -7,12 +7,15 @@
     <title>Контакты | Парус</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -58,7 +61,10 @@
                     <p>Клуб находится на берегу Клязьминского водохранилища, в получасе езды от Москвы. Стоянка яхт и клубный дом стоят у самой воды, парковка рядом.</p>
                     <p>Приезжайте за 20 минут до начала занятия, чтобы переодеться и получить жилет.</p>
                 </div>
-                <img class="split__image" src="images/klyazma-sunset.jpg" alt="Закат над водой, вдали лесистый берег" width="800" height="600">
+                <picture class="split__picture">
+                    <source type="image/webp" srcset="images/klyazma-sunset-480.webp 480w, images/klyazma-sunset.webp 800w" sizes="(min-width: 768px) 520px, 100vw">
+                    <img class="split__image" src="images/klyazma-sunset.jpg" srcset="images/klyazma-sunset-480.jpg 480w, images/klyazma-sunset.jpg 800w" sizes="(min-width: 768px) 520px, 100vw" width="800" height="600" alt="Закат над водой, вдали лесистый берег" loading="lazy">
+                </picture>
             </div>
         </section>
 

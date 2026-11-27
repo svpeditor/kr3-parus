@@ -7,12 +7,15 @@
     <title>Азы парусного спорта | Парус</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -32,7 +35,10 @@
         <article class="course" data-id="1" data-category="beginner" data-price="12900">
             <section class="section">
                 <div class="split">
-                    <img class="split__image" src="images/small-sloop.jpg" alt="Небольшая белая яхта на воде у берега" width="800" height="600">
+                    <picture class="split__picture">
+                        <source type="image/webp" srcset="images/small-sloop-480.webp 480w, images/small-sloop.webp 800w" sizes="(min-width: 768px) 520px, 100vw">
+                        <img class="split__image" src="images/small-sloop.jpg" srcset="images/small-sloop-480.jpg 480w, images/small-sloop.jpg 800w" sizes="(min-width: 768px) 520px, 100vw" width="800" height="600" alt="Небольшая белая яхта на воде у берега">
+                    </picture>
                     <div class="split__text">
                         <p class="product-card__category">Для новичков</p>
                         <h1>Азы парусного спорта</h1>
@@ -82,34 +88,36 @@
 
             <section class="section" id="prices">
                 <h2 class="section__title">Цены</h2>
-                <table class="info-table">
-                    <caption id="price-caption">Стоимость курса</caption>
-                    <thead>
-                        <tr><th>Вариант</th><th>Что входит</th><th>Цена</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Группа до 6 человек</th>
-                            <td>4 занятия, яхта, спасательный жилет, инструктор</td>
-                            <td>12 900 руб.</td>
-                        </tr>
-                        <tr>
-                            <th>Мини-группа до 3 человек</th>
-                            <td>То же самое, но больше практики у руля</td>
-                            <td>17 900 руб.</td>
-                        </tr>
-                        <tr>
-                            <th>Индивидуально</th>
-                            <td>Занятия в удобные для вас дни</td>
-                            <td>26 000 руб.</td>
-                        </tr>
-                        <tr>
-                            <th>Пробное занятие</th>
-                            <td>Одно занятие на 2 часа, потом можно записаться на курс</td>
-                            <td>1 500 руб.</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrapper">
+                    <table class="info-table">
+                        <caption id="price-caption">Стоимость курса</caption>
+                        <thead>
+                            <tr><th>Вариант</th><th>Что входит</th><th>Цена</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Группа до 6 человек</th>
+                                <td>4 занятия, яхта, спасательный жилет, инструктор</td>
+                                <td>12 900 руб.</td>
+                            </tr>
+                            <tr>
+                                <th>Мини-группа до 3 человек</th>
+                                <td>То же самое, но больше практики у руля</td>
+                                <td>17 900 руб.</td>
+                            </tr>
+                            <tr>
+                                <th>Индивидуально</th>
+                                <td>Занятия в удобные для вас дни</td>
+                                <td>26 000 руб.</td>
+                            </tr>
+                            <tr>
+                                <th>Пробное занятие</th>
+                                <td>Одно занятие на 2 часа, потом можно записаться на курс</td>
+                                <td>1 500 руб.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
 
             <section class="section" id="instructors">
@@ -138,7 +146,10 @@
             <h2 class="section__title">Другие курсы</h2>
             <div class="products-grid">
                 <article class="product-card" data-id="2" data-category="beginner" data-price="8500" data-available="true">
-                    <img class="product-card__image" src="images/bow-view.jpg" alt="Вид с борта на паруса и воду" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/bow-view-480.webp 480w, images/bow-view.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/bow-view.jpg" srcset="images/bow-view-480.jpg 480w, images/bow-view.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Вид с борта на паруса и воду" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Для новичков</p>
                         <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=2">Интенсив на выходные</a></h3>
@@ -155,7 +166,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="4" data-category="skipper" data-price="36000" data-available="true">
-                    <img class="product-card__image" src="images/cruiser-a.jpg" alt="Килевая яхта под парусами на озере" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/cruiser-a-480.webp 480w, images/cruiser-a.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/cruiser-a.jpg" srcset="images/cruiser-a-480.jpg 480w, images/cruiser-a.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Килевая яхта под парусами на озере" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Шкипер</p>
                         <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=4">Шкипер-прибрежник</a></h3>
@@ -172,7 +186,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="7" data-category="kids" data-price="9500" data-available="true">
-                    <img class="product-card__image" src="images/optimist-beach.jpg" alt="Детские лодки с разноцветными парусами на песчаном берегу" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/optimist-beach-480.webp 480w, images/optimist-beach.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/optimist-beach.jpg" srcset="images/optimist-beach-480.jpg 480w, images/optimist-beach.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Детские лодки с разноцветными парусами на песчаном берегу" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Детская группа</p>
                         <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=7">Детская группа 7-10 лет</a></h3>

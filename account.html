@@ -7,12 +7,15 @@
     <title>Личный кабинет | Парус</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -116,39 +119,39 @@
 
         <section class="section" id="orders">
             <h2 class="section__title">Мои заявки</h2>
-            <table class="info-table">
+            <table class="info-table table--cards">
                 <caption id="orders-caption">Список ваших заявок</caption>
                 <thead>
                     <tr><th>Номер</th><th>Что</th><th>Дата</th><th>Сумма</th><th>Статус</th></tr>
                 </thead>
                 <tbody>
                     <tr data-order="1024">
-                        <td>1024</td>
-                        <td>Азы парусного спорта</td>
-                        <td>5 июня</td>
-                        <td>12 900 руб.</td>
-                        <td><span class="badge badge--wait">Подтверждена</span></td>
+                        <td data-label="Номер">1024</td>
+                        <td data-label="Что">Азы парусного спорта</td>
+                        <td data-label="Дата">5 июня</td>
+                        <td data-label="Сумма">12 900 руб.</td>
+                        <td data-label="Статус"><span class="badge badge--wait">Подтверждена</span></td>
                     </tr>
                     <tr data-order="1019">
-                        <td>1019</td>
-                        <td>Выход на яхте, 4 часа</td>
-                        <td>29 мая</td>
-                        <td>2 800 руб.</td>
-                        <td><span class="badge badge--ok">Выполнена</span></td>
+                        <td data-label="Номер">1019</td>
+                        <td data-label="Что">Выход на яхте, 4 часа</td>
+                        <td data-label="Дата">29 мая</td>
+                        <td data-label="Сумма">2 800 руб.</td>
+                        <td data-label="Статус"><span class="badge badge--ok">Выполнена</span></td>
                     </tr>
                     <tr data-order="1015">
-                        <td>1015</td>
-                        <td>Аренда яхты Ласточка, 2 дня</td>
-                        <td>22 мая</td>
-                        <td>10 000 руб.</td>
-                        <td><span class="badge badge--ok">Оплачена</span></td>
+                        <td data-label="Номер">1015</td>
+                        <td data-label="Что">Аренда яхты Ласточка, 2 дня</td>
+                        <td data-label="Дата">22 мая</td>
+                        <td data-label="Сумма">10 000 руб.</td>
+                        <td data-label="Статус"><span class="badge badge--ok">Оплачена</span></td>
                     </tr>
                     <tr data-order="1008">
-                        <td>1008</td>
-                        <td>Занятие на лодке Лазер</td>
-                        <td>15 мая</td>
-                        <td>3 200 руб.</td>
-                        <td><span class="badge badge--closed">Отменена</span></td>
+                        <td data-label="Номер">1008</td>
+                        <td data-label="Что">Занятие на лодке Лазер</td>
+                        <td data-label="Дата">15 мая</td>
+                        <td data-label="Сумма">3 200 руб.</td>
+                        <td data-label="Статус"><span class="badge badge--closed">Отменена</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -157,35 +160,35 @@
         <section class="section" id="cart">
             <h2 class="section__title">Мои записи</h2>
             <p class="section__text">Сюда попадает всё, что вы выбрали в каталоге, расписании и флоте. Количество можно менять, лишнее убрать.</p>
-            <table class="info-table">
+            <table class="info-table table--cards">
                 <caption id="cart-caption">Выбранные курсы, выходы и аренда</caption>
                 <thead>
                     <tr><th>Название</th><th>Тип</th><th>Количество</th><th>Цена</th><th>Сумма</th><th>Удалить</th></tr>
                 </thead>
                 <tbody>
                     <tr data-cart="1" data-kind="course" data-price="12900">
-                        <td>Азы парусного спорта</td>
-                        <td>Курс</td>
-                        <td><input class="form__input" id="cart-qty-1" name="qty" type="number" min="1" max="14" value="1" aria-label="Количество: Азы парусного спорта"></td>
-                        <td>12 900 руб.</td>
-                        <td>12 900 руб.</td>
-                        <td class="info-table__action"><button class="button button--secondary button--small" type="button" data-remove="1">Удалить</button></td>
+                        <td data-label="Название">Азы парусного спорта</td>
+                        <td data-label="Тип">Курс</td>
+                        <td data-label="Количество"><input class="form__input" id="cart-qty-1" name="qty" type="number" min="1" max="14" value="1" aria-label="Количество: Азы парусного спорта"></td>
+                        <td data-label="Цена">12 900 руб.</td>
+                        <td data-label="Сумма">12 900 руб.</td>
+                        <td class="info-table__action" data-label="Удалить"><button class="button button--secondary button--small" type="button" data-remove="1">Удалить</button></td>
                     </tr>
                     <tr data-cart="2" data-kind="trip" data-price="3200">
-                        <td>Закатный выход, 6 июня</td>
-                        <td>Выход</td>
-                        <td><input class="form__input" id="cart-qty-2" name="qty" type="number" min="1" max="14" value="2" aria-label="Количество: Закатный выход, 6 июня"></td>
-                        <td>3 200 руб.</td>
-                        <td>6 400 руб.</td>
-                        <td class="info-table__action"><button class="button button--secondary button--small" type="button" data-remove="2">Удалить</button></td>
+                        <td data-label="Название">Закатный выход, 6 июня</td>
+                        <td data-label="Тип">Выход</td>
+                        <td data-label="Количество"><input class="form__input" id="cart-qty-2" name="qty" type="number" min="1" max="14" value="2" aria-label="Количество: Закатный выход, 6 июня"></td>
+                        <td data-label="Цена">3 200 руб.</td>
+                        <td data-label="Сумма">6 400 руб.</td>
+                        <td class="info-table__action" data-label="Удалить"><button class="button button--secondary button--small" type="button" data-remove="2">Удалить</button></td>
                     </tr>
                     <tr data-cart="3" data-kind="rent" data-price="5000">
-                        <td>Аренда яхты Ласточка</td>
-                        <td>Аренда</td>
-                        <td><input class="form__input" id="cart-qty-3" name="qty" type="number" min="1" max="14" value="2" aria-label="Количество: Аренда яхты Ласточка"></td>
-                        <td>5 000 руб.</td>
-                        <td>10 000 руб.</td>
-                        <td class="info-table__action"><button class="button button--secondary button--small" type="button" data-remove="3">Удалить</button></td>
+                        <td data-label="Название">Аренда яхты Ласточка</td>
+                        <td data-label="Тип">Аренда</td>
+                        <td data-label="Количество"><input class="form__input" id="cart-qty-3" name="qty" type="number" min="1" max="14" value="2" aria-label="Количество: Аренда яхты Ласточка"></td>
+                        <td data-label="Цена">5 000 руб.</td>
+                        <td data-label="Сумма">10 000 руб.</td>
+                        <td class="info-table__action" data-label="Удалить"><button class="button button--secondary button--small" type="button" data-remove="3">Удалить</button></td>
                     </tr>
                 </tbody>
             </table>

@@ -7,12 +7,15 @@
     <title>Расписание | Парус</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -62,119 +65,119 @@
         <section class="section" id="schedule-list">
             <h2 class="section__title">События месяца</h2>
             <p class="catalog-count" id="schedule-count">Найдено событий: 12</p>
-            <table class="info-table">
+            <table class="info-table table--cards">
                 <caption id="schedule-caption">Расписание на июнь</caption>
                 <thead>
                     <tr><th>Дата и время</th><th>Тип</th><th>Название</th><th>Лодка</th><th>Свободно мест</th><th>Цена</th><th>Запись</th></tr>
                 </thead>
                 <tbody>
                     <tr data-id="1" data-type="trip" data-free="3">
-                        <td>сб, 5 июня, 10:00</td>
-                        <td>Выход под парусом</td>
-                        <td>Выход на яхте, 4 часа</td>
-                        <td>Ветер</td>
-                        <td>3 из 6</td>
-                        <td>2 800 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=1">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 5 июня, 10:00</td>
+                        <td data-label="Тип">Выход под парусом</td>
+                        <td data-label="Название">Выход на яхте, 4 часа</td>
+                        <td data-label="Лодка">Ветер</td>
+                        <td data-label="Свободно мест">3 из 6</td>
+                        <td data-label="Цена">2 800 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=1">Записаться</a></td>
                     </tr>
                     <tr data-id="2" data-type="lesson" data-free="4">
-                        <td>сб, 5 июня, 15:00</td>
-                        <td>Открытое занятие</td>
-                        <td>Пробное занятие для новичков</td>
-                        <td>Ласточка</td>
-                        <td>4 из 4</td>
-                        <td>1 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=2">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 5 июня, 15:00</td>
+                        <td data-label="Тип">Открытое занятие</td>
+                        <td data-label="Название">Пробное занятие для новичков</td>
+                        <td data-label="Лодка">Ласточка</td>
+                        <td data-label="Свободно мест">4 из 4</td>
+                        <td data-label="Цена">1 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=2">Записаться</a></td>
                     </tr>
                     <tr data-id="3" data-type="kids" data-free="2">
-                        <td>вс, 6 июня, 11:00</td>
-                        <td>Детская группа</td>
-                        <td>Детская группа 7-10 лет</td>
-                        <td>Оптимист</td>
-                        <td>2 из 8</td>
-                        <td>1 200 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=3">Записаться</a></td>
+                        <td data-label="Дата и время">вс, 6 июня, 11:00</td>
+                        <td data-label="Тип">Детская группа</td>
+                        <td data-label="Название">Детская группа 7-10 лет</td>
+                        <td data-label="Лодка">Оптимист</td>
+                        <td data-label="Свободно мест">2 из 8</td>
+                        <td data-label="Цена">1 200 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=3">Записаться</a></td>
                     </tr>
                     <tr data-id="4" data-type="trip" data-free="0">
-                        <td>вс, 6 июня, 17:00</td>
-                        <td>Выход под парусом</td>
-                        <td>Закатный выход</td>
-                        <td>Ветер</td>
-                        <td>Мест нет</td>
-                        <td>3 200 руб.</td>
-                        <td class="info-table__action"><a class="button button--secondary button--small" href="order.html?trip=4">Лист ожидания</a></td>
+                        <td data-label="Дата и время">вс, 6 июня, 17:00</td>
+                        <td data-label="Тип">Выход под парусом</td>
+                        <td data-label="Название">Закатный выход</td>
+                        <td data-label="Лодка">Ветер</td>
+                        <td data-label="Свободно мест">Мест нет</td>
+                        <td data-label="Цена">3 200 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--secondary button--small" href="order.html?trip=4">Лист ожидания</a></td>
                     </tr>
                     <tr data-id="5" data-type="regatta" data-free="5">
-                        <td>сб, 12 июня, 10:00</td>
-                        <td>Регата</td>
-                        <td>Клубная регата, 1 этап</td>
-                        <td>Заря и Ветер</td>
-                        <td>5 из 14</td>
-                        <td>1 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=5">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 12 июня, 10:00</td>
+                        <td data-label="Тип">Регата</td>
+                        <td data-label="Название">Клубная регата, 1 этап</td>
+                        <td data-label="Лодка">Заря и Ветер</td>
+                        <td data-label="Свободно мест">5 из 14</td>
+                        <td data-label="Цена">1 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=5">Записаться</a></td>
                     </tr>
                     <tr data-id="6" data-type="trip" data-free="1">
-                        <td>сб, 12 июня, 17:00</td>
-                        <td>Выход под парусом</td>
-                        <td>Выход на малой яхте</td>
-                        <td>Ласточка</td>
-                        <td>1 из 4</td>
-                        <td>2 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=6">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 12 июня, 17:00</td>
+                        <td data-label="Тип">Выход под парусом</td>
+                        <td data-label="Название">Выход на малой яхте</td>
+                        <td data-label="Лодка">Ласточка</td>
+                        <td data-label="Свободно мест">1 из 4</td>
+                        <td data-label="Цена">2 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=6">Записаться</a></td>
                     </tr>
                     <tr data-id="7" data-type="lesson" data-free="2">
-                        <td>вс, 13 июня, 10:00</td>
-                        <td>Открытое занятие</td>
-                        <td>Пробное занятие на лодке Лазер</td>
-                        <td>Лазер</td>
-                        <td>2 из 2</td>
-                        <td>1 800 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=7">Записаться</a></td>
+                        <td data-label="Дата и время">вс, 13 июня, 10:00</td>
+                        <td data-label="Тип">Открытое занятие</td>
+                        <td data-label="Название">Пробное занятие на лодке Лазер</td>
+                        <td data-label="Лодка">Лазер</td>
+                        <td data-label="Свободно мест">2 из 2</td>
+                        <td data-label="Цена">1 800 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=7">Записаться</a></td>
                     </tr>
                     <tr data-id="8" data-type="kids" data-free="3">
-                        <td>вс, 13 июня, 12:00</td>
-                        <td>Детская группа</td>
-                        <td>Детская группа 11-14 лет</td>
-                        <td>Оптимист</td>
-                        <td>3 из 8</td>
-                        <td>1 200 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=8">Записаться</a></td>
+                        <td data-label="Дата и время">вс, 13 июня, 12:00</td>
+                        <td data-label="Тип">Детская группа</td>
+                        <td data-label="Название">Детская группа 11-14 лет</td>
+                        <td data-label="Лодка">Оптимист</td>
+                        <td data-label="Свободно мест">3 из 8</td>
+                        <td data-label="Цена">1 200 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=8">Записаться</a></td>
                     </tr>
                     <tr data-id="9" data-type="trip" data-free="5">
-                        <td>сб, 19 июня, 10:00</td>
-                        <td>Выход под парусом</td>
-                        <td>Выход на яхте, 6 часов</td>
-                        <td>Ветер</td>
-                        <td>5 из 6</td>
-                        <td>3 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=9">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 19 июня, 10:00</td>
+                        <td data-label="Тип">Выход под парусом</td>
+                        <td data-label="Название">Выход на яхте, 6 часов</td>
+                        <td data-label="Лодка">Ветер</td>
+                        <td data-label="Свободно мест">5 из 6</td>
+                        <td data-label="Цена">3 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=9">Записаться</a></td>
                     </tr>
                     <tr data-id="10" data-type="regatta" data-free="3">
-                        <td>вс, 20 июня, 11:00</td>
-                        <td>Регата</td>
-                        <td>Клубная регата, 2 этап</td>
-                        <td>Заря и Ветер</td>
-                        <td>3 из 14</td>
-                        <td>1 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=10">Записаться</a></td>
+                        <td data-label="Дата и время">вс, 20 июня, 11:00</td>
+                        <td data-label="Тип">Регата</td>
+                        <td data-label="Название">Клубная регата, 2 этап</td>
+                        <td data-label="Лодка">Заря и Ветер</td>
+                        <td data-label="Свободно мест">3 из 14</td>
+                        <td data-label="Цена">1 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=10">Записаться</a></td>
                     </tr>
                     <tr data-id="11" data-type="lesson" data-free="3">
-                        <td>сб, 26 июня, 10:00</td>
-                        <td>Открытое занятие</td>
-                        <td>Пробное занятие для новичков</td>
-                        <td>Ласточка</td>
-                        <td>3 из 4</td>
-                        <td>1 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=11">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 26 июня, 10:00</td>
+                        <td data-label="Тип">Открытое занятие</td>
+                        <td data-label="Название">Пробное занятие для новичков</td>
+                        <td data-label="Лодка">Ласточка</td>
+                        <td data-label="Свободно мест">3 из 4</td>
+                        <td data-label="Цена">1 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=11">Записаться</a></td>
                     </tr>
                     <tr data-id="12" data-type="trip" data-free="4">
-                        <td>вс, 27 июня, 16:00</td>
-                        <td>Выход под парусом</td>
-                        <td>Закатный выход</td>
-                        <td>Ветер</td>
-                        <td>4 из 6</td>
-                        <td>3 200 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=12">Записаться</a></td>
+                        <td data-label="Дата и время">вс, 27 июня, 16:00</td>
+                        <td data-label="Тип">Выход под парусом</td>
+                        <td data-label="Название">Закатный выход</td>
+                        <td data-label="Лодка">Ветер</td>
+                        <td data-label="Свободно мест">4 из 6</td>
+                        <td data-label="Цена">3 200 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=12">Записаться</a></td>
                     </tr>
                 </tbody>
             </table>

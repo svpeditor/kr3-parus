@@ -7,12 +7,15 @@
     <title>Парус | Парусная школа и яхт-клуб на Клязьминском водохранилище</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">Парус</a>
+
+            <button class="site-header__toggle" type="button">Меню</button>
 
             <nav class="site-nav">
                 <ul class="site-nav__list">
@@ -39,7 +42,12 @@
                     <button class="button button--secondary" type="button" data-open-modal>Быстрая заявка</button>
                 </div>
             </div>
-            <img class="hero__image" src="images/hero-desktop.jpg" alt="Яхта с белыми парусами идёт по воде" width="800" height="600">
+            <picture class="hero__picture">
+                <source media="(min-width: 900px)" type="image/webp" srcset="images/hero-desktop-480.webp 480w, images/hero-desktop.webp 800w" sizes="440px" width="800" height="600">
+                <source media="(min-width: 900px)" srcset="images/hero-desktop-480.jpg 480w, images/hero-desktop.jpg 800w" sizes="440px" width="800" height="600">
+                <source type="image/webp" srcset="images/hero-mobile-480.webp 480w, images/hero-mobile.webp 800w" sizes="(min-width: 768px) 720px, 100vw">
+                <img class="hero__image" src="images/hero-mobile.jpg" srcset="images/hero-mobile-480.jpg 480w, images/hero-mobile.jpg 800w" sizes="(min-width: 768px) 720px, 100vw" width="800" height="450" alt="Яхта с белыми парусами идёт по воде">
+            </picture>
         </section>
 
         <section class="section" id="about">
@@ -49,7 +57,10 @@
                     <p>Школа "Парус" работает на Клязьминском водохранилище с мая по октябрь. Теорию проходим в клубном доме, всё остальное время учимся на воде: сначала с инструктором на борту, потом самостоятельно.</p>
                     <p>Подходим и тем, кто никогда не держал руль, и тем, кто хочет получить права шкипера или выйти на регату.</p>
                 </div>
-                <img class="split__image" src="images/club-training.jpg" alt="Много парусных лодок на воде водохранилища, вдали лес" width="800" height="600">
+                <picture class="split__picture">
+                    <source type="image/webp" srcset="images/club-training-480.webp 480w, images/club-training.webp 800w" sizes="(min-width: 768px) 520px, 100vw">
+                    <img class="split__image" src="images/club-training.jpg" srcset="images/club-training-480.jpg 480w, images/club-training.jpg 800w" sizes="(min-width: 768px) 520px, 100vw" width="800" height="600" alt="Много парусных лодок на воде водохранилища, вдали лес" loading="lazy">
+                </picture>
             </div>
             <ul class="facts">
                 <li class="facts__item">
@@ -74,7 +85,10 @@
             </div>
             <div class="products-grid">
                 <article class="product-card" data-id="1" data-category="beginner" data-price="12900" data-available="true">
-                    <img class="product-card__image" src="images/small-sloop.jpg" alt="Небольшая белая яхта на воде у берега" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/small-sloop-480.webp 480w, images/small-sloop.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/small-sloop.jpg" srcset="images/small-sloop-480.jpg 480w, images/small-sloop.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Небольшая белая яхта на воде у берега" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Для новичков</p>
                         <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=1">Азы парусного спорта</a></h3>
@@ -91,7 +105,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="4" data-category="skipper" data-price="36000" data-available="true">
-                    <img class="product-card__image" src="images/cruiser-a.jpg" alt="Килевая яхта под парусами на озере" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/cruiser-a-480.webp 480w, images/cruiser-a.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/cruiser-a.jpg" srcset="images/cruiser-a-480.jpg 480w, images/cruiser-a.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Килевая яхта под парусами на озере" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Шкипер</p>
                         <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=4">Шкипер-прибрежник</a></h3>
@@ -108,7 +125,10 @@
                     </div>
                 </article>
                 <article class="product-card" data-id="7" data-category="kids" data-price="9500" data-available="true">
-                    <img class="product-card__image" src="images/optimist-beach.jpg" alt="Детские лодки с разноцветными парусами на песчаном берегу" width="800" height="600">
+                    <picture class="product-card__picture">
+                        <source type="image/webp" srcset="images/optimist-beach-480.webp 480w, images/optimist-beach.webp 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw">
+                        <img class="product-card__image" src="images/optimist-beach.jpg" srcset="images/optimist-beach-480.jpg 480w, images/optimist-beach.jpg 800w" sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw" width="800" height="600" alt="Детские лодки с разноцветными парусами на песчаном берегу" loading="lazy">
+                    </picture>
                     <div class="product-card__body">
                         <p class="product-card__category">Детская группа</p>
                         <h3 class="product-card__title"><a class="product-card__link" href="course.html?id=7">Детская группа 7-10 лет</a></h3>
@@ -132,43 +152,43 @@
                 <h2 class="section__title">Ближайшие выходы</h2>
                 <a href="schedule.html">Всё расписание</a>
             </div>
-            <table class="info-table">
+            <table class="info-table table--cards">
                 <caption id="trips-caption">Ближайшие выходы и занятия</caption>
                 <thead>
                     <tr><th>Дата и время</th><th>Название</th><th>Лодка</th><th>Свободно мест</th><th>Цена</th><th>Запись</th></tr>
                 </thead>
                 <tbody>
                     <tr data-id="1" data-type="trip" data-free="3">
-                        <td>сб, 5 июня, 10:00</td>
-                        <td>Выход на яхте, 4 часа</td>
-                        <td>Ветер</td>
-                        <td>3 из 6</td>
-                        <td>2 800 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=1">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 5 июня, 10:00</td>
+                        <td data-label="Название">Выход на яхте, 4 часа</td>
+                        <td data-label="Лодка">Ветер</td>
+                        <td data-label="Свободно мест">3 из 6</td>
+                        <td data-label="Цена">2 800 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=1">Записаться</a></td>
                     </tr>
                     <tr data-id="2" data-type="lesson" data-free="4">
-                        <td>сб, 5 июня, 15:00</td>
-                        <td>Пробное занятие для новичков</td>
-                        <td>Ласточка</td>
-                        <td>4 из 4</td>
-                        <td>1 500 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=2">Записаться</a></td>
+                        <td data-label="Дата и время">сб, 5 июня, 15:00</td>
+                        <td data-label="Название">Пробное занятие для новичков</td>
+                        <td data-label="Лодка">Ласточка</td>
+                        <td data-label="Свободно мест">4 из 4</td>
+                        <td data-label="Цена">1 500 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=2">Записаться</a></td>
                     </tr>
                     <tr data-id="3" data-type="kids" data-free="2">
-                        <td>вс, 6 июня, 11:00</td>
-                        <td>Детская группа 7-10 лет</td>
-                        <td>Оптимист</td>
-                        <td>2 из 8</td>
-                        <td>1 200 руб.</td>
-                        <td class="info-table__action"><a class="button button--primary button--small" href="order.html?trip=3">Записаться</a></td>
+                        <td data-label="Дата и время">вс, 6 июня, 11:00</td>
+                        <td data-label="Название">Детская группа 7-10 лет</td>
+                        <td data-label="Лодка">Оптимист</td>
+                        <td data-label="Свободно мест">2 из 8</td>
+                        <td data-label="Цена">1 200 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--primary button--small" href="order.html?trip=3">Записаться</a></td>
                     </tr>
                     <tr data-id="4" data-type="trip" data-free="0">
-                        <td>вс, 6 июня, 17:00</td>
-                        <td>Закатный выход</td>
-                        <td>Ветер</td>
-                        <td>Мест нет</td>
-                        <td>3 200 руб.</td>
-                        <td class="info-table__action"><a class="button button--secondary button--small" href="order.html?trip=4">Лист ожидания</a></td>
+                        <td data-label="Дата и время">вс, 6 июня, 17:00</td>
+                        <td data-label="Название">Закатный выход</td>
+                        <td data-label="Лодка">Ветер</td>
+                        <td data-label="Свободно мест">Мест нет</td>
+                        <td data-label="Цена">3 200 руб.</td>
+                        <td class="info-table__action" data-label="Запись"><a class="button button--secondary button--small" href="order.html?trip=4">Лист ожидания</a></td>
                     </tr>
                 </tbody>
             </table>
